@@ -1,0 +1,158 @@
+* {
+    font-family: "Geist";
+    user-select: none;
+    z-index: 1;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer */
+}
+
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(24px);
+}
+
+#time {
+    margin-left: 65px;
+    color: black;
+    z-index: 5;
+}
+
+.app {
+    z-index: 2;
+    position: fixed;
+    width: 20vw;
+    height: 20vw;
+
+    max-width: 200px;
+    max-height: 200px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app.open {
+    max-width: 10000000px;
+    max-height: 10000000px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.blur { 
+    will-change: filter;
+    filter: blur(14px);
+    margin-top: 125px !important;
+    pointer-events: none;
+}
+
+.blurheader { 
+    will-change: filter;
+    filter: blur(50px);
+    margin-top: 75px;
+}
+
+.AppIcon {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 6vw;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.opactiy0 {
+    opacity: 0;
+}
+
+#wallpaper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130vw;
+    height: 130vh;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(24px);
+}
+
+#lockscreen {
+    transition: 0s;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(20px);
+    will-change: backdrop-filter;
+}
+
+#ls-bg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition: 0s;
+}
+
+#line {
+    width: 30vw;
+    height: 5px;
+    background-color: white;
+    border-radius: 1000px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0s;
+}
+
+#data {
+    position: fixed;
+    top: -2vh;
+    left: 2vh;
+    transition: 0s;
+}
+
+#time-lockscreen {
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+    transition: 0s;
+}
+
+#notification {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.5rem;
+    margin-top: -10vh;
+    transition: 0s !important;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("Geist.ttf");
+}
