@@ -1,0 +1,26 @@
+{
+  "name": "glass",
+  "version": "1.0.0",
+  "description": "Glass - is a modern application launcher (like Springboard/Pixel Launcher)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux"
+  },
+  "author": {
+    "name": "SystemTraveler",
+    "email": "your.email@example.com"
+  },
+  "license": "ISC",
+  "build": {
+    "appId": "com.systemtraveler.glass",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "maintainer": "SystemTraveler adobedays614@gmail.com"
+    },
+    "homepage": "https://watchui.space/"
+  }
+}
